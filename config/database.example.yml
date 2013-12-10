@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  username:
+  password:
+  host: localhost
+  timeout: 5000
+
+development:
+  <<: *common
+  database: skeleton_dev
+
+test: &test
+  <<: *common
+  database: skeleton_test
+
+production:
+  <<: *common
+  database: skeleton
