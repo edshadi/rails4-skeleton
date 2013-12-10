@@ -9,4 +9,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'debugger'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
+end
